@@ -5,18 +5,20 @@ $brightYellow: hsl(71, 73%, 54%);
 $lightGray: hsl(204, 43%, 93%);
 $grayishBlue: hsl(218, 22%, 67%);
 
-$fontSize: 16px;
+$size-main: 16px; // change this to rem;
 
 $fontWeightReg: 400;
 $fontWeightBold: 700;
 
+$font-family: 'Karla', sans-serif;
+
 $breakpoints: (
-	small: 40em,
-	// 544px,
-		medium: 60em,
-	// 760px,
-		large: 61.25em,
-	// 980px,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+  small: 40em,
+  // 544px,
+  medium: 60em,
+  // 760px,
+  large: 61.25em,
+  // 980px,
 );
 
 /*----------------------------
@@ -28,13 +30,13 @@ $breakpoints: (
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Remove default padding */
 ul[class],
 ol[class] {
-	padding: 0;
+  padding: 0;
 }
 
 /* Remove default margin */
@@ -50,36 +52,36 @@ figure,
 blockquote,
 dl,
 dd {
-	margin: 0;
+  margin: 0;
 }
 
 /* Set core root defaults */
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 /* Set core body defaults */
 body {
-	min-height: 100vh;
-	text-rendering: optimizeSpeed;
-	line-height: 1.5;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
 }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-	text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
 img,
 picture {
-	max-width: 100%;
-	display: block;
+  max-width: 100%;
+  display: block;
 }
 
 /* Natural flow and rhythm in articles by default */
 article > * + * {
-	margin-top: 1em;
+  margin-top: 1em;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -87,21 +89,46 @@ input,
 button,
 textarea,
 select {
-	font: inherit;
+  font: inherit;
 }
 
 /* Blur images when they have no alt attribute */
 img:not([alt]) {
-	filter: blur(10px);
+  filter: blur(10px);
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
-	* {
-		animation-duration: 0.01ms !important;
-		animation-iteration-count: 1 !important;
-		transition-duration: 0.01ms !important;
-		scroll-behavior: auto !important;
-	}
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
+/*----------------------------
+	Attribution in footer
+------------------------------*/
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*----------------------------
+	Page layout
+------------------------------*/
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100vh;
+	padding: 1rem;
+	font-family: $font-family;
+	font-size: $size-main;
+}

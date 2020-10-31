@@ -86,4 +86,36 @@ img:not([alt]) {
     scroll-behavior: auto !important;
   }
 }
+
+/*----------------------------
+	Attribution in footer
+------------------------------*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+/*----------------------------
+	Page layout
+------------------------------*/
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 100vh;
+  padding: 1rem;
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+}
 /*# sourceMappingURL=styles.css.map */
