@@ -117,6 +117,7 @@ body {
   padding: 1rem;
   font-family: "Karla", sans-serif;
   font-size: 16px;
+  background-color: #e5eff5;
 }
 
 main {
@@ -136,12 +137,11 @@ main {
 
 .singleprice-grid {
   max-width: 800px;
-  border-radius: 0.5rem;
-  margin: 0 1rem 0 1rem;
+  margin: 0 0.6rem 0 0.6rem;
 }
 
 .singleprice {
-  padding: 1.3rem;
+  padding: 1.5rem 1.3rem 2rem 1.3rem;
 }
 
 .singleprice__header {
@@ -159,19 +159,79 @@ main {
 .singleprice__mainheading {
   letter-spacing: -0.02rem;
   font-size: 1.34rem;
+  color: #2ab2af;
 }
 
 .singleprice__subheading {
   font-size: 1rem;
   letter-spacing: -0.01rem;
+  color: #c0df34;
 }
 
 .singleprice__mainparagraph {
-  line-height: 1.76rem;
+  line-height: 1.66rem;
+  letter-spacing: -0.02rem;
+  font-size: 0.9em;
 }
 
 .singleprice__secondaryheading {
   font-size: 1.2rem;
   letter-spacing: -0.02rem;
+}
+
+.singleprice__pricing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.singleprice strong {
+  font-size: 2rem;
+  padding-right: 1rem;
+}
+
+.singleprice em {
+  font-style: normal;
+  color: #e5eff5;
+}
+
+.singleprice__monthlyparagraph {
+  padding-bottom: 2rem;
+}
+
+.singleprice button {
+  width: 100%;
+  height: 3rem;
+  border-radius: 0.5rem;
+  border-style: none;
+  background-color: #c0df34;
+  color: white;
+}
+
+.singleprice ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.singleprice:nth-child(1) {
+  background-color: white;
+  color: #98a6bd;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.singleprice:nth-child(2) {
+  background-color: #2ab2af;
+  color: white;
+}
+
+.singleprice:nth-child(3) {
+  background-color: #4abfbd;
+  color: white;
+  border-radius: 0 0 0.5rem 0.5rem;
 }
 /*# sourceMappingURL=styles.css.map */
