@@ -136,8 +136,11 @@ main {
 }
 
 .singleprice-grid {
-  max-width: 800px;
+  max-width: 680px;
   margin: 0 0.6rem 0 0.6rem;
+  -webkit-box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
 }
 
 .singleprice {
@@ -204,11 +207,13 @@ main {
 
 .singleprice button {
   width: 100%;
-  height: 3rem;
+  height: 3.5rem;
   border-radius: 0.5rem;
   border-style: none;
   background-color: #c0df34;
   color: white;
+  -webkit-box-shadow: 3px 3px 16px rgba(0, 0, 0, 0.2);
+          box-shadow: 3px 3px 16px rgba(0, 0, 0, 0.2);
 }
 
 .singleprice ul {
@@ -233,5 +238,37 @@ main {
   background-color: #4abfbd;
   color: white;
   border-radius: 0 0 0.5rem 0.5rem;
+}
+
+@media screen and (min-width: 40em) {
+  .singleprice-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 0.5fr 0.8fr;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template: 0.5fr 0.8fr / 1fr 1fr;
+  }
+  .singleprice__mainparagraph {
+    font-size: 1rem;
+  }
+  .singleprice:nth-child(1) {
+    padding: 2.5rem 5rem 2.5rem 3rem;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: 1 / 1 / 1 / span 2;
+  }
+  .singleprice:nth-child(2) {
+    padding: 3rem;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: 2 / 1 / 2 / 1;
+    border-radius: 0 0 0 0.5rem;
+  }
+  .singleprice:nth-child(3) {
+    padding: 3rem;
+    grid-area: 2 / 2 / auto / auto;
+    border-radius: 0 0 0.5rem 0;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

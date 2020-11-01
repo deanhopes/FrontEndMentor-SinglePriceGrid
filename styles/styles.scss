@@ -143,8 +143,10 @@ main {
 }
 
 .singleprice-grid {
-  max-width: 800px;
+  max-width: 680px;
   margin: 0 0.6rem 0 0.6rem;
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
 }
 
 .singleprice {
@@ -200,11 +202,12 @@ main {
 
   button {
     width: 100%;
-    height: 3rem;
+    height: 3.5rem;
     border-radius: 0.5rem;
     border-style: none;
     background-color: $brightYellow;
     color: white;
+    box-shadow: 3px 3px 16px rgba(0, 0, 0, 0.2);
   }
 
   ul {
@@ -229,5 +232,32 @@ main {
     background-color: $lighterCyan;
     color: white;
     border-radius: 0 0 0.5rem 0.5rem;
+  }
+}
+
+@media screen and (min-width: map-get($breakpoints, small)) {
+  .singleprice-grid {
+    display: grid;
+    grid-template: 0.5fr 0.8fr / 1fr 1fr;
+  }
+  .singleprice {
+
+    &__mainparagraph {
+      font-size: 1rem;
+    }
+    &:nth-child(1) {
+      padding: 2.5rem 5rem 2.5rem 3rem;
+      grid-area: 1 / 1 / 1 / span 2;
+    }
+    &:nth-child(2) {
+      padding: 3rem;
+      grid-area: 2 / 1 / 2 / 1;
+      border-radius: 0 0 0 0.5rem;
+    }
+    &:nth-child(3) {
+      padding: 3rem;
+      grid-area: 2 / 2 / auto / auto;
+      border-radius: 0 0 0.5rem 0;
+    }
   }
 }
